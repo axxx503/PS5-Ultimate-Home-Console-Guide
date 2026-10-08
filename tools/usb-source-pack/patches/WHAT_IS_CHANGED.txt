@@ -1,0 +1,22 @@
+Source-level policy implemented by scripts/patch_repo.py:
+
+PS5CEMU-HAR
+  /data/ps5cemu/games         -> /app0/roms/wiiu
+  /data/ps5cemu/azahar/games -> /app0/roms/3ds
+  Writable /data/ps5cemu state is untouched.
+
+Porpoise
+  /data/porpoise/games        -> /app0/roms
+  Writable /data/porpoise state is untouched.
+
+XPSemu
+  /data/xemu/games            -> /app0/roms
+  BIOS/MCPX/HDD/settings remain in /data/xemu.
+
+PS5X360
+  No executable path rewrite is necessary on current source.
+  It already uses /app0/assets/roms; assets/game_paths.txt is seeded explicitly.
+
+Why /app0:
+  A native app always has its own app mount even when /mnt is hidden by its sandbox namespace.
+  ShadowMountPlus can source the app folder from /mnt/usb0/homebrew, so /app0 can physically live on USB.

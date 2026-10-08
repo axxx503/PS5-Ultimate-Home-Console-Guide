@@ -1,0 +1,18 @@
+/mnt/usb0/homebrew/
+├── PPSA99360/                 PS5CEMU-HAR
+│   └── roms/
+│       ├── wiiu/
+│       └── 3ds/
+├── PPSA99764/                 Porpoise
+│   └── roms/
+├── PPSA97358/                 XPSemu
+│   └── roms/
+└── PPSA50011/                 PS5X360
+    └── assets/
+        └── roms/
+
+Writable emulator state stays internal:
+/data/ps5cemu/
+/data/porpoise/
+/data/xemu/
+/download0/xbox360ps5/ (PS5X360 sandbox persistence)
